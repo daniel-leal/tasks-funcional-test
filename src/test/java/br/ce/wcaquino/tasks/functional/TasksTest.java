@@ -132,12 +132,12 @@ public class TasksTest {
 			driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
 			driver.findElement(By.id("saveButton")).click();
 			String mensagem = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Due date must not be in past", mensagem);
+			Assert.assertEquals("Success!", mensagem);
 			
 			// remover tarefa		
 			driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
 			mensagem = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Due date must not be in past", mensagem);
+			Assert.assertEquals("Success!", mensagem);
 		} finally {
 			// Fechar o browser
 			driver.quit();
